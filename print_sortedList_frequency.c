@@ -1,8 +1,9 @@
 /* print the frequency of values in a sorted array */
 
+
 void
 print_sortedList_frequency(int A[], int size){
-	int i,j, S[size], new_size;
+	int i,j, S[size], new_size, count;
 	S[0]=A[0];
 	j = 1;
 	for (i=1;i<size;i++){
@@ -19,11 +20,11 @@ print_sortedList_frequency(int A[], int size){
 	i = 0;
 	for (j=0; j<new_size; j++){
 		count = 0;
-		while (A[i]==B[j]){
+		while (A[i]==S[j]){
 			count++;
 			i++;
 		}
-		printf("%6d%6d",B[j],count);
+		printf("%4d%9d\n",S[j],count);
 	}
 }
-		
+			
